@@ -23,9 +23,9 @@ public class MyHashmap <K,V>{
     private final float loadFactor;
 
 
-    MyHashmap(float loadFactor){
-        this.hashTable=(Entry<K, V>[])new Entry[16];
-        this.loadFactor=loadFactor;
+    MyHashmap(){
+        this.hashTable=(Entry<K, V>[])new Entry[DEFAULT_CAPACITY];
+        this.loadFactor=DEFAULT_LOAD_FACTOR;
     }
 
 
@@ -46,6 +46,16 @@ public class MyHashmap <K,V>{
         n |= n >>> 16;
         return n < 0 ? 1 : (n >= 1073741824 ? 1073741824 : n + 1);
     }
+
+
+// easy method for interviews
+//    final int tableSizeFor(int cap) {
+//        int n =1;
+//        while(n<cap) {
+//            n <<=1;
+//        }
+//        return n;
+//    }
 
     public void put(K key, V value) {
         if (size >= hashTable.length * loadFactor) {
