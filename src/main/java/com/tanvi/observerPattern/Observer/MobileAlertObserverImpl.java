@@ -7,10 +7,10 @@ public class MobileAlertObserverImpl implements NotificationAlertObserver{
     String userName;
     StocksObservable observable;
 
-    public MobileAlertObserverImpl(String emailId, StocksObservable observable)
+    public MobileAlertObserverImpl(String userName, StocksObservable observable)
     {
         this.observable=observable;
-        this.userName=emailId;
+        this.userName=userName;
     }
 
     @Override
