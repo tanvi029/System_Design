@@ -16,8 +16,12 @@ public class store {
         NotificationAlertObserver observer3 = new MobileAlertObserverImpl("userName", iphoneObservable);
 
         iphoneObservable.add(observer1);
+        System.out.println("1111111111");
         iphoneObservable.add(observer2);
+        System.out.println("222222222");
         iphoneObservable.add(observer3);
+        System.out.println("3333333333");
+
 
         iphoneObservable.setStockCount(10);
         iphoneObservable.setStockCount(-10);

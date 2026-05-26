@@ -1,0 +1,35 @@
+# Build output
+target/
+
+# Config files
+*.config
+*.cfg
+*.conf
+application.properties
+application.yml
+application.yaml
+*.env
+.env*
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Credentials & secrets
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
